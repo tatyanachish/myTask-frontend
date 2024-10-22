@@ -6,6 +6,7 @@ const getAllTasks = (setTask) => {
      setTask(data)
     })
 }
+
 const addTask = (title,setTitle,setTask) => {
     axios.post('http://localhost:7000/saveTasks',{title})
     .then((data) => {
@@ -14,8 +15,6 @@ const addTask = (title,setTitle,setTask) => {
         getAllTasks(setTask)
     })
 }
-
- 
 
 
 export {getAllTasks,addTask};

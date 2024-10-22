@@ -1,16 +1,22 @@
+import { MdEdit } from "react-icons/md";
+import { MdDeleteSweep } from "react-icons/md";
+
 export const ToDo = ({task,description,date,editMyText}) => {
     return(
-        <div className='container'>
         <div>
-            <p>Task: {task}</p>
-            <p>Description: {description}</p>
-            <p>Date: {date}</p>
-          
-        </div>
-        <div className='buttons'>
-            <button className='btn' onClick={editMyText}>Edit</button>
-            <button className='btn'>Delete</button>
-        </div>
+            <div className="line">
+                <div className="block">
+                    <p>Task: {task}</p>
+                    <MdEdit onClick={editMyText} />
+                    <MdDeleteSweep />
+                </div>
+                <div className="block">
+                    <p>Description: {description}</p> 
+                </div>
+                <div className="block">
+                    <p>Date</p>  
+                </div>
+            </div>
         </div>
     )
 }
